@@ -4,15 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Anchor from "../anchor";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
-import {HeaderOne} from "./HeaderOne"
-import {
-    IoIosSearch,
-    IoMdPerson,
-    IoIosHeartEmpty,
-    IoIosCart,
-    IoIosMenu
-  } from "react-icons/io";
 import MobileMenu from "./elements/MobileMenu";
 
 
@@ -29,17 +20,6 @@ function MMnavigate() {
         <Col className="px-4 mx-1">
           <Anchor  path="/">
                 <img src={process.env.PUBLIC_URL + "/assets/images/icons/house-door.svg"}  alt="Bootstrap" width="32" height="32"/>
-            </Anchor>
-        </Col>
-            
-        <Col className="px-4 mx-1">
-            <Anchor path="/other/cart">
-                <img src={process.env.PUBLIC_URL + "/assets/images/icons/cart-fill.svg"}  alt="Bootstrap" width="32" height="32"/>
-            </Anchor>
-        </Col>
-        <Col className="px-4 mx-1">
-            <Anchor path="/other/wishlist">
-            <img src={process.env.PUBLIC_URL + "/assets/images/icons/heart.svg"}  alt="Bootstrap" width="32" height="32"/>
             </Anchor>
         </Col>
         <Col className="px-4 mx-1">

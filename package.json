@@ -11,6 +11,8 @@
   "dependencies": {
     "@hasanm95/cogo-toast": "https://github.com/hasanm95/cogo-toast",
     "@next/font": "^13.0.5",
+    "@react-three/drei": "^9.99.7",
+    "@react-three/fiber": "^8.15.19",
     "@reduxjs/toolkit": "^1.9.0",
     "bootstrap": "^5.2.2",
     "clsx": "^1.2.1",
@@ -35,6 +37,7 @@
     "redux-persist": "^6.0.0",
     "sweetalert2": "^11.7.5",
     "swiper": "^8.4.5",
+    "three": "^0.162.0",
     "uuid": "^9.0.0",
     "yet-another-react-lightbox": "^2.2.2"
   },

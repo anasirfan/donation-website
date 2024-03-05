@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { HeaderTwo } from "../components/Header";
+import { HeaderFive } from "../components/Header";
 import Anchor from "../components/anchor"
 
 const NotFound = () => {
   return (
     <Fragment>
-      <HeaderTwo />
+      <HeaderFive />
       <div
         className="nothing-found-area bg-404"
         style={{

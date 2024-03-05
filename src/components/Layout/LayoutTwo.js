@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { HeaderOne } from "../Header";
+import { HeaderEight, HeaderFive, HeaderFour, HeaderOne, HeaderSeven } from "../Header";
 import { FooterTwo } from "../Footer";
 import ScrollToTop from "../scroll-to-top"
 import { useMediaQuery } from 'react-responsive'
@@ -12,7 +12,7 @@ const LayoutTwo = ({ children, aboutOverlay, footerBgClass }) => {
 
   return (
     <Fragment>
-      <HeaderOne aboutOverlay={aboutOverlay} />
+      <HeaderFive aboutOverlay={aboutOverlay} />
       {children}
       {isMobile &&  <MMnavigate/>}
       <FooterTwo footerBgClass={footerBgClass} />

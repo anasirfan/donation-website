@@ -1,7 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import clsx from "clsx";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import { SubscribeEmailTwo } from "../Newsletter";
 
 const FooterTwo = ({ footerBgClass }) => {
   return (
@@ -26,55 +25,10 @@ const FooterTwo = ({ footerBgClass }) => {
             </div>
 
             {/*=======  copyright text  =======*/}
-            <div className="footer-single-widget__copyright">
-              &copy; {new Date().getFullYear() + " "}
-              {/* <a href="https://www.hasthemes.com" target="_blank"> */}
-               <a>Madhurya</a>
-              {/* </a> */}
-              <span>All Rights Reserved</span>
-            </div>
+            
           </Col>
 
-          {/* <Col className="footer-single-widget space-mb--50">
-            <h5 className="footer-single-widget__title">ABOUT</h5>
-            <nav className="footer-single-widget__nav">
-              <ul>
-                <li>
-                  <a href="#">About us</a>
-                </li>
-                <li>
-                  <a href="#">Store location</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-                <li>
-                  <a href="#">Orders tracking</a>
-                </li>
-              </ul>
-            </nav>
-          </Col>
-
-          <Col className="footer-single-widget space-mb--50">
-            <h5 className="footer-single-widget__title">USEFUL LINKS</h5>
-            <nav className="footer-single-widget__nav">
-              <ul>
-                <li>
-                  <a href="#">Returns</a>
-                </li>
-                <li>
-                  <a href="#">Support Policy</a>
-                </li>
-                <li>
-                  <a href="#">Size guide</a>
-                </li>
-                <li>
-                  <a href="#">FAQs</a>
-                </li>
-              </ul>
-            </nav>
-          </Col> */}
-
+          
           <Col className="footer-single-widget space-mb--50">
             <h5 className="footer-single-widget__title">FOLLOW US ON</h5>
             <nav className="footer-single-widget__nav footer-single-widget__nav--social">
@@ -102,17 +56,6 @@ const FooterTwo = ({ footerBgClass }) => {
               </ul>
             </nav>
           </Col>
-
-          {/* <Col className="footer-single-widget space-mb--50">
-            <div className="footer-subscribe-widget">
-              <h2 className="footer-subscribe-widget__title">Subscribe.</h2>
-              <p className="footer-subscribe-widget__subtitle">
-                Subscribe to our newsletter to receive news on update.
-              </p>
-              
-              <SubscribeEmailTwo mailchimpUrl="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" />
-            </div>
-          </Col> */}
         </Row>
       </Container>
     </footer>
