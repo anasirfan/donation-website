@@ -4,6 +4,10 @@ import { TextureLoader } from 'three';
 import { OrbitControls } from '@react-three/drei';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import SignupModal from '../Header/elements/SignupModal';
+import "../../../node_modules/uikit"
+
+import 'uikit/dist/css/uikit.min.css'; // uikit CSS
+import UIkit from 'uikit'; // uikit JavaScript
 
 const FadeTransitionImage = ({ texturePaths, frameIndex }) => {
     const { invalidate } = useThree();
@@ -86,68 +90,125 @@ const ThreeScene = () => {
     };
 
     return (
-
-        <Container fluid className="background-image">
-            <Row className="my-4 justify-content-center align-items-center">
-                <Col xs={4} md={4} lg={2} className='challenge-div'>
-                    {/* Card for the challenge */}
-                    <Card className="text-left justify-content-start mb-3">
-                        <Card.Header className="header-card">TAKE THE CHALLENGE</Card.Header>
-                        <Card.Body>
-                            <Card.Title className='heading-card mb-3'>How many lives you can impact?</Card.Title>
-                            <Card.Text className='mb-2 text-card'>
-                                5 Innocents
-                            </Card.Text> <Card.Text className='mb-2 text-card'>
-                                15 Innocents
-                            </Card.Text> <Card.Text className='mb-2 text-card'>
-                                25 Innocents
-                            </Card.Text>
-                            <Button variant="primary" className="reg-btn" onClick={handleRegister}>Register</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                {registerModal && (
-                <SignupModal show={registerModal}  onHide={()=>setRegisterModal(false)}/>
-                ) }
-                <Col xs={8} md={8} lg={10} className='character-div'>
-                    <Col>
-                        {/* Canvas for the donation visual */}
-                        <div className="canvas-wrapper mb-3 character-style">
-                            <Canvas>
-                                <ambientLight intensity={0.5} />
-                                <pointLight position={[20, 10, 10]} />
-                                <OrbitControls enableZoom={false} />
-                                <group >
-                                    <FadeTransitionImage
-                                        texturePaths={boyTexturePaths}
-                                        frameIndex={boyFrameIndex}
-                                    />
-                                </group>
-                            </Canvas>
-                        </div>
+      <>
+        <Container fluid className="background-image ">
+          <Row className="my-4 justify-content-center align-items-center">
+            <Col xs={4} md={4} lg={2} className="challenge-div">
+              {/* Card for the challenge */}
+              <Card className="text-left justify-content-start mb-3">
+                <Card.Header className="header-card">
+                  TAKE THE CHALLENGE
+                </Card.Header>
+                <Card.Body>
+                  <Card.Title className="heading-card mb-3">
+                    How many lives you can impact?
+                  </Card.Title>
+                  <Card.Text className="mb-2 text-card">5 Innocents</Card.Text>{" "}
+                  <Card.Text className="mb-2 text-card">15 Innocents</Card.Text>{" "}
+                  <Card.Text className="mb-2 text-card">25 Innocents</Card.Text>
+                  <Button
+                    variant="primary"
+                    className="reg-btn"
+                    onClick={handleRegister}
+                  >
+                    Register
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            {registerModal && (
+              <SignupModal
+                show={registerModal}
+                onHide={() => setRegisterModal(false)}
+              />
+            )}
+            <Col xs={8} md={8} lg={10} className="character-div">
+              <Col>
+                {/* Canvas for the donation visual */}
+                <div className="canvas-wrapper mb-3 character-style">
+                  <Canvas>
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[20, 10, 10]} />
+                    <OrbitControls enableZoom={false} />
+                    <group>
+                      <FadeTransitionImage
+                        texturePaths={boyTexturePaths}
+                        frameIndex={boyFrameIndex}
+                      />
+                    </group>
+                  </Canvas>
+                </div>
+              </Col>
+              <Col className="donate-box">
+                {/* Donation form */}
+                <Form className="my-3">
+                  <Form.Group
+                    as={Row}
+                    className="mb-3"
+                    controlId="formHorizontalEmail"
+                  >
+                    <Col sm={9}>
+                      <Form.Control
+                        type="number"
+                        placeholder="Enter Amount"
+                        onChange={(e) =>
+                          setCurrentDonation(Number(e.target.value))
+                        }
+                      />
                     </Col>
-                    <Col className="donate-box">
-                        {/* Donation form */}
-                        <Form className="my-3">
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                                <Col sm={9}>
-                                    <Form.Control type="number" placeholder="Enter Amount" onChange={(e) => setCurrentDonation(Number(e.target.value))} />
-                                </Col>
-                                <Col sm={3}>
-                                    <Button variant="outline-primary" className='donate-btn' onClick={(e) => handleDonation(currentDonation)} >Donate</Button>
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3">
-                                <Col sm={{ span: 10, offset: 1 }}>
-                                    <Button variant="outline-secondary" className='attach-card' onClick={handleAttachCard}>Attach Card</Button>
-                                </Col>
-                            </Form.Group>
-                        </Form>
+                    <Col sm={3}>
+                      <Button
+                        variant="outline-primary"
+                        className="donate-btn"
+                        onClick={(e) => handleDonation(currentDonation)}
+                      >
+                        Donate
+                      </Button>
                     </Col>
-                </Col>
-            </Row>
+                  </Form.Group>
+
+                  <Form.Group as={Row} className="mb-3">
+                    <Col sm={{ span: 10, offset: 1 }}>
+                      <Button
+                        variant="outline-secondary"
+                        className="attach-card"
+                        onClick={handleAttachCard}
+                      >
+                        Attach Card
+                      </Button>
+                    </Col>
+                  </Form.Group>
+                </Form>
+              </Col>
+            </Col>
+          </Row>
         </Container>
+
+        <section className="register-sec uk-container">
+          <div className="uk-grid" uk-grid="" style={{ marginBottom: "20px" }}>
+            <div className="ssss uk-width-1-2" style={{ height: "auto" }}></div>
+
+            <div
+              className="uk-width-1-2"
+              style={{ height: "500px" }}
+            >
+              <div className="register-title uk-padding ">
+                <h1 className="header-card2">TAKE THE CHALLENGE</h1>
+              <h2> How many lives you can impact? </h2>
+              <Button
+                variant="primary"
+                className="uk-button uk-button-secondary"
+                onClick={handleRegister}
+              >
+                Register
+              </Button>
+              </div>
+
+              
+            </div>
+          </div>
+        </section>
+      </>
     );
 };
 

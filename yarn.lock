@@ -7117,6 +7117,11 @@ uglify-js@3.0.x:
     commander "~2.11.0"
     source-map "~0.5.1"
 
+uikit@^3.19.1:
+  version "3.19.1"
+  resolved "https://registry.npmjs.org/uikit/-/uikit-3.19.1.tgz"
+  integrity sha512-a3bgLea7uaDq/43yLVbHUOLte0JVRZic3LN2jaltLzzZl9lbTazBSb8nGvZ1gMiwMRHSPvwlCFwFoFLvVN8oeA==
+
 umd@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmjs.org/umd/-/umd-3.0.3.tgz"
