@@ -62,3 +62,141 @@
 @import "components/brand-logo";
 @import "components/image-slider";
 @import "components/overlay-menu";
+
+.challenge-div{
+    padding: 10px;
+    width: 200px;
+}
+
+.heading-card {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text-card {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.header-card {
+    font-size: 13px;
+    font-weight: bold;
+    color: #6dcdbb;
+}
+
+.character-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-btn {
+    background: #6dcdbb;
+    border-color: #6dcdbb;
+    font-size: 15px;
+}
+
+.donate-box {
+    width: 270px;
+}
+
+.attach-card {
+    margin-left: 50px;
+    color: white;
+    background: #3c3636;
+}
+
+.donate-btn {
+    border-color: #6dcdbb;
+    color: #ffff;
+    background: #6dcdbb;
+}
+
+.background-image {
+    background-image: url('/assets/images/background.jpg');
+}
+
+.character-style { 
+    display: block;
+    width: 200px;
+    height: 240px;
+    margin-top: 65px;
+    margin-left: 14px;
+}
+
+.modal-banner-div {
+    flex: 1 1 0%;
+    display: block;
+    padding: 24px;
+    background-color: #ebf5fa;
+    width: 400px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+
+    @include respond(extra-small-mobile) {
+        display: none;
+    }
+}
+
+.modal-input-div {
+    flex: 1 1 0%;
+    width: 400px;
+    padding: 24px;
+
+    p {
+        font-size: 12px;
+    }
+
+    input::placeholder {
+        color: #BBBBBB;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    a {
+        width: 100%;
+    }
+
+    hr {
+        margin: 0px;
+        block-size: 1px;
+        inline-size: 100%;
+        border-block-end: 0px;
+        border-block-start: 1px solid rgb(207, 206, 206);
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+.close-btn-div {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+    font-size: 25px;
+    color: #BBBBBB;
+    
+}
+
+.login-sell-div {
+    margin-top: 20px;
+    display: flex;
+
+    span {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.66;
+        color: rgb(0, 0, 0);
+    }
+    u{
+        cursor: pointer;
+    }
+}

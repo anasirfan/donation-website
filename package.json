@@ -16,6 +16,7 @@
     "@reduxjs/toolkit": "^1.9.0",
     "bootstrap": "^5.2.2",
     "clsx": "^1.2.1",
+    "cogo-toast": "^4.2.3",
     "contentful": "^9.3.5",
     "next": "^13.4.2",
     "next-redux-wrapper": "^8.0.0",

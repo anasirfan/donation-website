@@ -1,7 +1,11 @@
 /*=============================================
 =            header            =
 =============================================*/
+.header-bg{
+  background: rgb(115,26,29);
+background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, rgba(97,12,12,1) 100%);
 
+}
 header {
   position: relative;
   &.topbar-shadow {
@@ -9,7 +13,6 @@ header {
       position: absolute;
       top: -3px;
       left: 0;
-
       width: 100%;
       height: 3px;
 
@@ -250,7 +253,7 @@ header {
 
       margin-right: 20px;
       svg {
-        color: $black--two;
+        color: white;
       }
 
       &:last-child {
@@ -312,7 +315,7 @@ header {
 
         transition: 0.3s;
 
-        color: $grey;
+        color: white;
         border: none;
         background: none;
         &:hover {
@@ -359,7 +362,7 @@ header {
 
           margin-right: 5px;
 
-          color: $grey;
+          color: white;
 
           &:after {
             position: absolute;
@@ -381,7 +384,7 @@ header {
 
           transition: $transition--default;
 
-          fill: $grey--eight;
+          fill: white;
         }
         &:last-child {
           margin-right: 0;
@@ -501,7 +504,7 @@ header {
     padding: 30px 60px;
 
     & > li {
-      border-right: 1px solid $grey--three;
+      border-right: 1px solid white;
       &:last-child {
         border-right: 0;
       }
@@ -532,7 +535,7 @@ header {
 
           margin-bottom: 15px;
 
-          color: $grey;
+          color: white;
 
           &:after {
             position: absolute;
@@ -548,7 +551,7 @@ header {
             transition: $transition--default;
 
             opacity: 0;
-            background-color: $grey--three;
+            background-color: white;
           }
 
           &:hover {
@@ -670,7 +673,7 @@ header {
         top: 5px;
         right: 0;
 
-        fill: $grey--eight;
+        fill: white;
       }
       a {
         font-size: 15px;
@@ -680,7 +683,7 @@ header {
 
         margin-bottom: 15px;
 
-        color: $grey;
+        color: white;
         &:after {
           position: absolute;
           bottom: 0;
@@ -695,7 +698,7 @@ header {
           transition: $transition--default;
 
           opacity: 0;
-          background-color: $grey--three;
+          background-color: white;
         }
 
         &:hover {
@@ -824,7 +827,7 @@ header {
         opacity: 1; /* Firefox */
 
 /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: $grey--nine;
+        color: white;
       }
 
       :-ms-input-placeholder {
@@ -967,7 +970,7 @@ header {
       padding-bottom: 5px;
 
       color: $black--two;
-      border-bottom: 1px solid $grey--ten;
+      border-bottom: 1px solid white;
     }
 
     .cart-product-wrapper,
@@ -989,7 +992,7 @@ header {
           margin-bottom: 25px;
           padding-bottom: 25px;
 
-          border-bottom: 1px solid $grey--ten;
+          border-bottom: 1px solid white;
           .cart-close-icon,
           .wishlist-close-icon {
             line-height: 8px;
@@ -1054,7 +1057,7 @@ header {
                 font-size: 12px;
                 line-height: 22px;
 
-                color: $grey;
+                color: white;
               }
               .main-price {
                 font-size: 14px;
@@ -1069,7 +1072,7 @@ header {
 
                   text-decoration: line-through;
 
-                  color: $grey;
+                  color: white;
                 }
               }
 
