@@ -7,33 +7,38 @@ import { useRouter } from "next/router";
 import cogoToast from "cogo-toast";
 const SignupModal = ({ show, onHide, createLogin }) => {
   // Add your authentication logic and state here
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+
+  });
   const router = useRouter();
   const [loginError, setloginError] = useState("");
   const [error, setError] = useState({
     errorEmail: "",
   });
-  const handleInputChange = (event) => {
-    setEmail(event.target.value);
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name] : e.target.value,
+    })
   };
   const handleSubmit = (event) => {
     event.preventDefault();
 
     // Validate the email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const isValidEmail = emailRegex.test(email);
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const isValidEmail = emailRegex.test(email);
 
-    if (!isValidEmail) {
-      cogoToast.error("Invalid Email!");
-      setError({
-        errorEmail: "Please enter a valid email address",
-      });
-      return; // Stop further execution if email is invalid
-    }
+    // if (!isValidEmail) {
+    //   cogoToast.error("Invalid Email!");
+    //   setError({
+    //     errorEmail: "Please enter a valid email address",
+    //   });
+    //   return; // Stop further execution if email is invalid
+    // }
 
     // Your logic for handling the form submission goes here
 
-    router.push(`/signup?email=${encodeURIComponent(email)}`);
+    router.push('/dashboard');
   };
   
 
@@ -53,7 +58,7 @@ const SignupModal = ({ show, onHide, createLogin }) => {
             <img
               src={
                 process.env.PUBLIC_URL +
-                "/assets/images/modal/signup-banner.jpg"
+                "/assets/images/register/register.jpg"
               }
               className="img-fluid"
               alt=""
@@ -67,22 +72,69 @@ const SignupModal = ({ show, onHide, createLogin }) => {
             </div>
             <div className="space-mb--10">
               <p>
-                Signing up for elleways is fast and easy — no commitments or
-                monthly fees.
+              Palestine Fund
               </p>
             </div>
             <p className="error-p">
-              {error.errorEmail && <p>{error.errorEmail}</p>}
+              {/* {error.errorEmail && <p>{error.errorEmail}</p>} */}
             </p>
             <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label className="space-mb--5">Email adddress</label>
+            
+              <div className="form-group my-1">
+                
                 <input
-                  value={email}
+                                                     value={formData?.lastName}
+
                   onChange={handleInputChange}
                   className="form-control"
+                  name="lastName"
+                  type="text"
+                  placeholder="First Name"
+                />
+              </div>
+              <div className="form-group my-1">
+                
+                <input
+                                   value={formData?.lastName}
+
+                  onChange={handleInputChange}
+                  className="form-control"
+                  name="lastName"
+                  type="text"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div className="form-group my-1">
+                
+                <input
+                value={formData?.email}
+                  onChange={handleInputChange}
+                  className="form-control"
+                  name="email"
                   type="email"
-                  placeholder="Please input your email"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="form-group my-1">
+                
+                <input
+            value={formData?.password}
+                  onChange={handleInputChange}
+                  className="form-control"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div className="form-group my-1">
+                
+                <input
+                  value={formData?.confirmPassword}
+                  onChange={handleInputChange}
+                  className="form-control"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder="Confirm Password"
                 />
               </div>
               <button
@@ -93,34 +145,15 @@ const SignupModal = ({ show, onHide, createLogin }) => {
                 Sign up
               </button>
             </form>
-            <div className="or-div">
-              <hr />
-              <span>or</span>
-              <hr />
-            </div>
-            <div className="google-sign-in-button space-mb--20">
-              <button onClick={handleGoogleSignIn}>
-                <span>
-                  <FcGoogle />
-                </span>
-                Continue with Google
-              </button>
-            </div>
-            <div className="terms-div">
-              <p>
-                By signing up you agree to our{" "}
-                <a href="/terms-coditions">Terms of Service</a> and{" "}
-                <a href="/privacy-policy">Privacy Policy</a>.
-              </p>
-            </div>
+            
             <div className="login-sell-div">
               <span>
                 <u onClick={() => createLogin()}>Login</u>
               </span>
               <span className="line-span">|</span>
               <span>
-                <a href="https://projects.apexsol.us/elleways-new/seller-login/">
-                  <u>Sell on elleways</u>
+                <a href="/">
+                  <u>Our Mission</u>
                 </a>
               </span>
             </div>

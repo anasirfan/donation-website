@@ -46,7 +46,7 @@ const HeaderFive = ({ aboutOverlay }) => {
   return (
     <Fragment>
       <header
-        className={`topbar-shadow ${scroll > headerTop ? "is-sticky" : ""}`}
+        className={`topbar-shadow header-bg ${scroll > headerTop ? "is-sticky" : ""}`}
       >
         <div className="header-top-area border-bottom--grey space-pt--10 space-pb--10 d-none d-lg-block">
           <Container className="wide">

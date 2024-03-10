@@ -87,76 +87,76 @@ const Dashboard = () => {
         setDonationAmount(donationAmount + amount);
     };
     return (
-        <LayoutTwo>
-            <Container fluid>
-                {/* Main Content */}
-                <Row className="my-4 justify-content-center align-items-center">
-                <Col xs={12} md={3} lg={2} className="bg-light p-3">
-            <ListGroup>
-              <ListGroup.Item>
-                <h5>Name</h5>
-                <p>John Doe</p> {/* Ejemplo de nombre */}
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <h5>Rank</h5>
-                <p>Gold Member</p> {/* Ejemplo de rango */}
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <h5>no. of lifes saved</h5>
-                <p>42</p> {/* Ejemplo de vidas salvadas */}
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Button variant="primary" className="w-100 mb-2">Invite</Button>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Button variant="secondary" className="w-100 mb-2">Share Progress</Button>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Button variant="info" className="w-100">Card Details</Button>
-              </ListGroup.Item>
-            </ListGroup>
-          </Col>
 
-                    <Col xs={6} md={6} lg={4}>
-                        <Col>
-                            {/* Canvas for the donation visual */}
-                            <div className="canvas-wrapper mb-3" style={{ height: "300px", width: "300px" }}>
-                                <Canvas>
-                                    <ambientLight intensity={0.5} />
-                                    <pointLight position={[20, 10, 10]} />
-                                    <OrbitControls enableZoom={false} />
-                                    <group >
-                                        <FadeTransitionImage
-                                            texturePaths={boyTexturePaths}
-                                            frameIndex={boyFrameIndex}
-                                        />
-                                    </group>
-                                </Canvas>
-                            </div>
-                        </Col>
-                        <Col>
-                            {/* Donation form */}
-                            <Form className="my-3">
-                                <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                                    <Col sm={9}>
-                                        <Form.Control type="number" placeholder="Enter Amount" onChange={(e) => setCurrentDonation(Number(e.target.value))} />
-                                    </Col>
-                                    <Col sm={3}>
-                                        <Button variant="outline-primary" onClick={(e) => handleDonation(currentDonation)} >Donate</Button>
-                                    </Col>
-                                </Form.Group>
+        <Container fluid>
+            {/* Main Content */}
+            <Row>
+                <Col xs={12} md={3} lg={2} className="bg-light p-3 vh-100">
+                    <ListGroup className="vh-100">
+                        <ListGroup.Item>
+                            <h5>Name</h5>
+                            <p>John Doe</p> 
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <h5>Rank</h5>
+                            <p>Gold Member</p>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <h5>no. of lifes saved</h5>
+                            <p>42</p> 
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Button variant="primary" className="w-100 mb-2">Invite</Button>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Button variant="secondary" className="w-100 mb-2">Share Progress</Button>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Button variant="info" className="w-100">Card Details</Button>
+                        </ListGroup.Item>
+                    </ListGroup>
+                </Col>
 
-                                <Form.Group as={Row} className="mb-3">
-                                    <Col sm={{ span: 10, offset: 1 }}>
-                                        <Button variant="outline-secondary" onClick={handleAttachCard}>Attach Card</Button>
-                                    </Col>
-                                </Form.Group>
-                            </Form>
-                        </Col>
+                <Col xs={6} md={6} lg={4}>
+                    <Col>
+                        {/* Canvas for the donation visual */}
+                        <div className="canvas-wrapper mb-3" style={{ height: "300px", width: "300px" }}>
+                            <Canvas>
+                                <ambientLight intensity={0.5} />
+                                <pointLight position={[20, 10, 10]} />
+                                <OrbitControls enableZoom={false} />
+                                <group >
+                                    <FadeTransitionImage
+                                        texturePaths={boyTexturePaths}
+                                        frameIndex={boyFrameIndex}
+                                    />
+                                </group>
+                            </Canvas>
+                        </div>
                     </Col>
-                </Row>
-            </Container>
-        </LayoutTwo>
+                    <Col>
+                        {/* Donation form */}
+                        <Form className="my-3">
+                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+                                <Col sm={9}>
+                                    <Form.Control type="number" placeholder="Enter Amount" onChange={(e) => setCurrentDonation(Number(e.target.value))} />
+                                </Col>
+                                <Col sm={3}>
+                                    <Button variant="outline-primary" onClick={(e) => handleDonation(currentDonation)} >Donate</Button>
+                                </Col>
+                            </Form.Group>
+
+                            <Form.Group as={Row} className="mb-3">
+                                <Col sm={{ span: 10, offset: 1 }}>
+                                    <Button variant="outline-secondary" onClick={handleAttachCard}>Attach Card</Button>
+                                </Col>
+                            </Form.Group>
+                        </Form>
+                    </Col>
+                </Col>
+            </Row>
+        </Container>
+
     );
 };
 

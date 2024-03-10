@@ -25,7 +25,7 @@ const Navigation = () => {
         </li>
         <li className="position-relative">
           <Anchor path="/">
-            Donate Now
+            Our Mission
           </Anchor>
          
         </li>

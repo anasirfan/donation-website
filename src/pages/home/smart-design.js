@@ -6,8 +6,9 @@ const SmartDesign = () => {
         <LayoutTwo aboutOverlay={false}>
             {/* hero slider */}
             {/* <HeroSliderSix sliderData={heroSliderData} /> */}
-            <div className="space-mb--r100"></div>
-            <ThreeScene />
+           
+            <ThreeScene/>
+            
         </LayoutTwo>
        
     ); 
