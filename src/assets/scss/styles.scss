@@ -222,9 +222,24 @@
 }
 
 .donate-sec .gradient{
+    height: 500px;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.8239670868347339) 0%, rgba(0,0,0,0.3841911764705882) 28%, rgba(8,8,8,0) 100%);}
 
 .donate-sec h2 {
     color:#6d0e0f   
+}
+section{
+    margin-bottom: 20px;
+}
+.uk-button-danger{
+    margin: 10px 20px 10px 0px !important;
+}
+.content h1{
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: white;
+}
+.uk-card{
+    width: fit-content;
 }

@@ -183,42 +183,60 @@ const ThreeScene = () => {
             </Col>
           </Row>
         </Container>
-        <section className='donate-sec'>
-          <div className='gradient'>
-          <div className='uk-container  uk-padding '  >
-            <div style={{width : '50%'}} >
-            {/* <h2 > Your donation could be the lifeline for a Palestinian child in crisis </h2> */}
-            <h1 className='uk-light' > Your donation could be the lifeline for a Palestinian child </h1>
-            <div className='uk-card uk-card-body' >
 
-            </div>
+        <section className="donate-sec">
+          <div className="gradient">
+            <div className="uk-container  uk-padding ">
+              <div className="content ">
+                <div className="uk-child-width-1-2@m  uk-child-width-1-1@s">
+                  <h1>
+                    {" "}
+                    Your donation could be the lifeline for a Palestinian child{" "}
+                  </h1>
+                </div>
+
+                <div className="uk-card uk-card-default uk-card-body">
+                  <Form.Control
+                    type="number"
+                    placeholder="Enter Amount"
+                    onChange={(e) => setCurrentDonation(Number(e.target.value))}
+                  />
+                  <button className="uk-button uk-button-danger ">
+                    {" "}
+                    Donate{" "}
+                  </button>
+                  <button className="uk-button uk-button-secondary">
+                    {" "}
+                    Attach Card{" "}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          </div>
-
         </section>
 
         <section className="register-sec uk-container">
-          <div className="uk-grid uk-child-width-expand@s" uk-grid="" style={{ marginBottom: "20px" }}>
-            <div className="ssss uk-width-1-2" style={{ height: "auto" }}></div>
+          <div className="uk-grid " uk-grid="" style={{ marginBottom: "20px" }}>
+            <div
+              className="ssss uk-width-1-2@m uk-width-1-1@s "
+              style={{ height: "500px" }}
+            ></div>
 
             <div
-              className="uk-width-1-2"
+              className="uk-width-1-2@m uk-width-1-1@s"
               style={{ height: "500px" }}
             >
               <div className="register-title uk-padding ">
                 <h1 className="header-card2">TAKE THE CHALLENGE</h1>
-              <h2> How many lives you can impact? </h2>
-              <Button
-                variant="primary"
-                className="uk-button uk-button-secondary"
-                onClick={handleRegister}
-              >
-                Register
-              </Button>
+                <h2> How many lives you can impact? </h2>
+                <Button
+                  variant="primary"
+                  className="uk-button uk-button-secondary"
+                  onClick={handleRegister}
+                >
+                  Register
+                </Button>
               </div>
-
-              
             </div>
           </div>
         </section>
