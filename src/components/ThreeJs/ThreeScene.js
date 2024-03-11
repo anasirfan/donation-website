@@ -183,9 +183,23 @@ const ThreeScene = () => {
             </Col>
           </Row>
         </Container>
+        <section className='donate-sec'>
+          <div className='gradient'>
+          <div className='uk-container  uk-padding '  >
+            <div style={{width : '50%'}} >
+            {/* <h2 > Your donation could be the lifeline for a Palestinian child in crisis </h2> */}
+            <h1 className='uk-light' > Your donation could be the lifeline for a Palestinian child </h1>
+            <div className='uk-card uk-card-body' >
+
+            </div>
+            </div>
+          </div>
+          </div>
+
+        </section>
 
         <section className="register-sec uk-container">
-          <div className="uk-grid" uk-grid="" style={{ marginBottom: "20px" }}>
+          <div className="uk-grid uk-child-width-expand@s" uk-grid="" style={{ marginBottom: "20px" }}>
             <div className="ssss uk-width-1-2" style={{ height: "auto" }}></div>
 
             <div

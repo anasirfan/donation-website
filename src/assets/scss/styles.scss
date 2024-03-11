@@ -215,3 +215,16 @@
     font-weight: bold;
     color: #6d0e0f;
 }
+.donate-sec{
+    background-image: url("./images/03.jpg");
+    background-size: cover;
+    height: 500px;
+}
+
+.donate-sec .gradient{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8239670868347339) 0%, rgba(0,0,0,0.3841911764705882) 28%, rgba(8,8,8,0) 100%);}
+
+.donate-sec h2 {
+    color:#6d0e0f   
+}
