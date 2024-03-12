@@ -243,3 +243,17 @@ color: white;
 .uk-card{
     width: fit-content;
 }
+
+
+
+
+
+.items-grid div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0); 
+    height: 50px; 
+    background-color: darkgrey;
+}
