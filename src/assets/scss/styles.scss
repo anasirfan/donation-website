@@ -262,3 +262,31 @@ color: white;
     margin-bottom: 5px;
     margin-top: 15px;
 }
+
+
+.donate-items{
+    width: 20%;
+    margin-left: 10%;
+}
+.boyimg{
+    height: 60%;
+    width: fit-content;
+
+}
+
+.list-group .list-group-item{
+    margin-top: 20px;
+} 
+.list-group-item button{
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .boyimg{
+        width: 50%;
+    }
+    .donate-items {
+        width: 50%;
+        margin-left: 8%;
+    }
+}
