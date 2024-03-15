@@ -94,19 +94,18 @@ const Dashboard = () => {
       <Container fluid>
         {/* Main Content */}
         <Row>
-          <Col xs={12} md={3} lg={2} className=" p-3 vh-100" style={{backgroundColor:'#38040e'}} >
+          <Col xs={12} md={3} lg={3} className=" p-3 vh-100" style={{backgroundColor:'#38040e'}} >
             <ListGroup className="vh-100">
               <ListGroup.Item>
-                <h5>Name:</h5>
-                <p>John Doe</p>
+                <h4 className=''>Name:<span>John Doe</span> </h4>
+
               </ListGroup.Item>
               <ListGroup.Item>
-                <h5>Rank:</h5>
-                <p>Gold Member</p>
+              <h4 className=''>Rank:<span>Gold Member</span> </h4>
+
               </ListGroup.Item>
               <ListGroup.Item>
-                <h5>no. of lifes saved:</h5>
-                <p>42</p>
+              <h4 className=''>no. of lifes saved:<span>42</span> </h4>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Button variant="" className="w-100 mb-2" style={{background:'#640d14'}}>
@@ -126,7 +125,7 @@ const Dashboard = () => {
             </ListGroup>
           </Col>
 
-          <Col xs={12} md={6} lg={10}>
+          <Col xs={12} md={6} lg={9}>
             <Col>
               <div
                 className="uk-flex uk-flex-center uk-flex-middle "
