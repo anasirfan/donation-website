@@ -91,7 +91,7 @@ const ThreeScene = () => {
     return (
       <>
         <Container fluid className="background-image ">
-          <Row className="my-4 justify-content-center align-items-center">
+          <Row className=" justify-content-center align-items-center">
             <Col xs={4} md={4} lg={2} className="challenge-div">
               {/* Card for the challenge */}
               {/* <Card className="text-left justify-content-start mb-3">
