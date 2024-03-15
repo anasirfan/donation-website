@@ -6,6 +6,10 @@ import { TextureLoader } from 'three';
 import { OrbitControls } from '@react-three/drei';
 import { LayoutTwo } from '../components/Layout';
 import Image from 'next/image';
+import "../../node_modules/uikit"
+import 'uikit/dist/css/uikit.min.css'; // uikit CSS
+import UIkit from 'uikit'; // uikit JavaScript
+
 
 const FadeTransitionImage = ({ texturePaths, frameIndex }) => {
     const { invalidate } = useThree();
@@ -87,39 +91,100 @@ const Dashboard = () => {
         setDonationAmount(donationAmount + amount);
     };
     return (
+      <Container fluid>
+        {/* Main Content */}
+        <Row>
+          <Col xs={12} md={3} lg={3} className=" p-3 vh-100" style={{backgroundColor:'#38040e'}} >
+            <ListGroup className="vh-100">
+              <ListGroup.Item>
+                <h4 className=''>Name:<span>John Doe</span> </h4>
 
-        <Container fluid>
-            {/* Main Content */}
-            <Row>
-                <Col xs={12} md={3} lg={2} className="bg-light p-3 vh-100">
-                    <ListGroup className="vh-100">
-                        <ListGroup.Item>
-                            <h5>Name</h5>
-                            <p>John Doe</p> 
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <h5>Rank</h5>
-                            <p>Gold Member</p>
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <h5>no. of lifes saved</h5>
-                            <p>42</p> 
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <Button variant="primary" className="w-100 mb-2">Invite</Button>
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <Button variant="secondary" className="w-100 mb-2">Share Progress</Button>
-                        </ListGroup.Item>
-                        <ListGroup.Item>
-                            <Button variant="info" className="w-100">Card Details</Button>
-                        </ListGroup.Item>
-                    </ListGroup>
-                </Col>
+              </ListGroup.Item>
+              <ListGroup.Item>
+              <h4 className=''>Rank:<span>Gold Member</span> </h4>
 
-                <Col xs={6} md={6} lg={4}>
-                    <Col>
-                        {/* Canvas for the donation visual */}
+              </ListGroup.Item>
+              <ListGroup.Item>
+              <h4 className=''>no. of lifes saved:<span>42</span> </h4>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Button variant="" className="w-100 mb-2" style={{background:'#640d14'}}>
+                  Invite
+                </Button>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Button variant="" className="w-100 mb-2" style={{background:'#800e13'}} >
+                  Share Progress
+                </Button>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Button variant="" className="w-100" style={{background:'#ad2831'}} >
+                  Card Details
+                </Button>
+              </ListGroup.Item>
+            </ListGroup>
+          </Col>
+
+          <Col xs={12} md={6} lg={9}>
+            <Col>
+              <div
+                className="uk-flex uk-flex-center uk-flex-middle "
+                style={{height: "100vh" , backgroundColor:'antiquewhite'  }}
+              >
+                <div className='boyimg ' >
+                  <Canvas>
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[20, 10, 10]} />
+                    <OrbitControls enableZoom={false} />
+                    <group>
+                      <FadeTransitionImage
+                        texturePaths={boyTexturePaths}
+                        frameIndex={boyFrameIndex}
+                      />
+                    </group>
+                  </Canvas>
+                </div>
+
+                <div className='donate-items '>
+                <div  className='uk-grid uk-child-width-1-4 items-grid uk-grid-collapse ' uk-grid = "" >
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              </div>
+
+              <button className="uk-button uk-button-danger ">
+                    {" "}
+                    Donate{" "}
+                  </button>
+              
+              </div>
+              </div>
+            </Col>
+          </Col>
+        </Row>
+      </Container>
+    );
+};
+
+export default Dashboard;
+
+
+
+{/* <Col>
+                         Canvas for the donation visual 
                         <div className="canvas-wrapper mb-3" style={{ height: "300px", width: "300px" }}>
                             <Canvas>
                                 <ambientLight intensity={0.5} />
@@ -133,10 +198,12 @@ const Dashboard = () => {
                                 </group>
                             </Canvas>
                         </div>
-                    </Col>
-                    <Col>
-                        {/* Donation form */}
-                        <Form className="my-3">
+                    </Col> */}
+
+
+
+{/* Donation form */}
+{/* <Form className="my-3">
                             <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                                 <Col sm={9}>
                                     <Form.Control type="number" placeholder="Enter Amount" onChange={(e) => setCurrentDonation(Number(e.target.value))} />
@@ -151,13 +218,4 @@ const Dashboard = () => {
                                     <Button variant="outline-secondary" onClick={handleAttachCard}>Attach Card</Button>
                                 </Col>
                             </Form.Group>
-                        </Form>
-                    </Col>
-                </Col>
-            </Row>
-        </Container>
-
-    );
-};
-
-export default Dashboard;
+                        </Form> */}

@@ -48,7 +48,7 @@ const HeaderFive = ({ aboutOverlay }) => {
       <header
         className={`topbar-shadow header-bg ${scroll > headerTop ? "is-sticky" : ""}`}
       >
-        <div className="header-top-area border-bottom--grey space-pt--10 space-pb--10 d-none d-lg-block">
+        {/* <div className="header-top-area border-bottom--grey space-pt--10 space-pb--10 d-none d-lg-block">
           <Container className="wide">
             <div className="header-top">
               <div className="header-top__left">
@@ -92,7 +92,7 @@ const HeaderFive = ({ aboutOverlay }) => {
               </div>
             </div>
           </Container>
-        </div>
+        </div> */}
         <div className="header-bottom-area">
           <Container className="wide">
             <div className="header-content d-flex align-items-center justify-content-between position-relative space-py-mobile-only--30">

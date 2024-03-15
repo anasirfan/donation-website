@@ -5,7 +5,6 @@ import { OrbitControls } from '@react-three/drei';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import SignupModal from '../Header/elements/SignupModal';
 import "../../../node_modules/uikit"
-
 import 'uikit/dist/css/uikit.min.css'; // uikit CSS
 import UIkit from 'uikit'; // uikit JavaScript
 
@@ -92,10 +91,10 @@ const ThreeScene = () => {
     return (
       <>
         <Container fluid className="background-image ">
-          <Row className="my-4 justify-content-center align-items-center">
+          <Row className=" justify-content-center align-items-center">
             <Col xs={4} md={4} lg={2} className="challenge-div">
               {/* Card for the challenge */}
-              <Card className="text-left justify-content-start mb-3">
+              {/* <Card className="text-left justify-content-start mb-3">
                 <Card.Header className="header-card">
                   TAKE THE CHALLENGE
                 </Card.Header>
@@ -114,7 +113,26 @@ const ThreeScene = () => {
                     Register
                   </Button>
                 </Card.Body>
-              </Card>
+              </Card> */}
+              <div  className='uk-grid uk-child-width-1-4 items-grid uk-grid-collapse' uk-grid = "" >
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              <div ><img src="/assets/images/Apple.png" alt="" /></div>
+              </div>
+
             </Col>
             {registerModal && (
               <SignupModal
@@ -183,6 +201,7 @@ const ThreeScene = () => {
             </Col>
           </Row>
         </Container>
+
 
         <section className="donate-sec">
           <div className="gradient">

@@ -5,13 +5,13 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 const FooterTwo = ({ footerBgClass }) => {
   return (
     <footer
-      className={clsx("space-pt--50 space-pb--20 bg-clr")}
+      className={clsx(" space-pb--20 bg-clr")}
     >
       <Container className="wide">
         <Col className="main-footer">
-          <Col className="footer-single-widget space-mb--20">
+          <Col className="footer-single-widget ">
             {/* logo */}
-            <div className="logo space-mb--20">
+            <div className="logo ">
               <img
                 src={
                   process.env.PUBLIC_URL + footerBgClass ===
@@ -29,7 +29,7 @@ const FooterTwo = ({ footerBgClass }) => {
           </Col>
 
 
-          <Row className="footer-single-widget space-mb--50">
+          <Row className="footer-single-widget ">
             <h5 className="footer-single-widget__title">FOLLOW US ON</h5>
             <nav className="footer-single-widget__nav footer-single-widget__nav--social">
               <ul className="footer-ul">
