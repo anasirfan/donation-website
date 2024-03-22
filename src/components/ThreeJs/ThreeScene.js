@@ -203,7 +203,7 @@ const ThreeScene = () => {
         </Container>
 
 
-        <section className="donate-sec">
+        {/* <section className="donate-sec">
           <div className="gradient">
             <div className="uk-container  uk-padding ">
               <div className="content ">
@@ -232,7 +232,7 @@ const ThreeScene = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="register-sec uk-container">
           <div className="uk-grid " uk-grid="" style={{ marginBottom: "20px" }}>

@@ -107,21 +107,20 @@ const Dashboard = () => {
               <ListGroup.Item>
               <h4 className=''>no. of lifes saved:<span>42</span> </h4>
               </ListGroup.Item>
-              <ListGroup.Item>
-                <Button variant="" className="w-100 mb-2" style={{background:'#640d14'}}>
+              
+                <Button variant="" className="w-100 mb-2 mt-4" style={{background:'#ce4257'}}>
                   Invite
                 </Button>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Button variant="" className="w-100 mb-2" style={{background:'#800e13'}} >
+              
+
+                <Button variant="" className="w-100 mb-2 " style={{background:'#ff7f51'}} >
                   Share Progress
                 </Button>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Button variant="" className="w-100" style={{background:'#ad2831'}} >
+
+                <Button variant="" className="w-100" style={{background:'#ff9b54'}} >
                   Card Details
                 </Button>
-              </ListGroup.Item>
+          
             </ListGroup>
           </Col>
 
