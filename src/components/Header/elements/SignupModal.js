@@ -18,7 +18,7 @@ const SignupModal = ({ show, onHide, createLogin }) => {
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name] : e.target.value,
+      [e.target.name]: e.target.value,
     })
   };
   const handleSubmit = (event) => {
@@ -40,7 +40,7 @@ const SignupModal = ({ show, onHide, createLogin }) => {
 
     router.push('/dashboard');
   };
-  
+
 
   return (
     <Modal
@@ -72,18 +72,18 @@ const SignupModal = ({ show, onHide, createLogin }) => {
             </div>
             <div className="space-mb--10">
               <p>
-              Palestine Fund
+                Palestine Fund
               </p>
             </div>
             <p className="error-p">
               {/* {error.errorEmail && <p>{error.errorEmail}</p>} */}
             </p>
             <form onSubmit={handleSubmit}>
-            
+
               <div className="form-group my-1">
-                
+
                 <input
-                                                     value={formData?.lastName}
+                  value={formData?.lastName}
 
                   onChange={handleInputChange}
                   className="form-control"
@@ -93,9 +93,9 @@ const SignupModal = ({ show, onHide, createLogin }) => {
                 />
               </div>
               <div className="form-group my-1">
-                
+
                 <input
-                                   value={formData?.lastName}
+                  value={formData?.lastName}
 
                   onChange={handleInputChange}
                   className="form-control"
@@ -105,9 +105,9 @@ const SignupModal = ({ show, onHide, createLogin }) => {
                 />
               </div>
               <div className="form-group my-1">
-                
+
                 <input
-                value={formData?.email}
+                  value={formData?.email}
                   onChange={handleInputChange}
                   className="form-control"
                   name="email"
@@ -116,9 +116,9 @@ const SignupModal = ({ show, onHide, createLogin }) => {
                 />
               </div>
               <div className="form-group my-1">
-                
+
                 <input
-            value={formData?.password}
+                  value={formData?.password}
                   onChange={handleInputChange}
                   className="form-control"
                   name="password"
@@ -127,7 +127,7 @@ const SignupModal = ({ show, onHide, createLogin }) => {
                 />
               </div>
               <div className="form-group my-1">
-                
+
                 <input
                   value={formData?.confirmPassword}
                   onChange={handleInputChange}
@@ -145,14 +145,14 @@ const SignupModal = ({ show, onHide, createLogin }) => {
                 Sign up
               </button>
             </form>
-            
+
             <div className="login-sell-div">
               <span>
                 <u onClick={() => createLogin()}>Login</u>
               </span>
-              <span className="line-span">|</span>
+              <span className="line-span px-2">|</span>
               <span>
-                <a href="/">
+                <a href="/" className="text-black">
                   <u>Our Mission</u>
                 </a>
               </span>
