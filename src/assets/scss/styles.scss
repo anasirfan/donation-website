@@ -109,6 +109,11 @@
     color: white;
     background: #3c3636;
 }
+.totalprice {
+    
+    margin-left: 50px;
+    color: white;
+}
 
 .donate-btn {
     border-color: #6dcdbb;
@@ -118,6 +123,8 @@
 
 .background-image {
     background-image: url('/assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .character-style { 
@@ -309,4 +316,20 @@ color: white;
         width: 50%;
         margin-left: 8%;
     }
+}
+
+.pricetag{
+    font-size: 8px;
+}
+
+.grid-div{
+
+    margin: 2px;
+    height: 20px;
+    width: 20px;
+}
+
+.imageDiv {
+    height: 35px;
+    width: 40px;
 }
