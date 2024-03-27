@@ -9,7 +9,6 @@
     "export": "next export"
   },
   "dependencies": {
-    "@hasanm95/cogo-toast": "https://github.com/hasanm95/cogo-toast",
     "@next/font": "^13.0.5",
     "@react-three/drei": "^9.99.7",
     "@react-three/fiber": "^8.15.19",
