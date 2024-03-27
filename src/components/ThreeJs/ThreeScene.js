@@ -134,7 +134,7 @@ const ThreeScene = () => {
 
   return (
     <>
-      <Container fluid className="background-image ">
+      <Container fluid className="  background-image ">
         <Row className=" justify-content-center align-items-center">
           <Col xs={4} md={4} lg={1} className="challenge-div">
             {/* Card for the challenge */}
@@ -192,9 +192,12 @@ const ThreeScene = () => {
                 </Canvas>
               </div>
             </Col>
-            <Col className="donate-box">
+            <Col className="  ">
               {/* Donation form */}
-              <Form className="my-3">
+
+              {/* musfar replaced the form here  */}
+
+              {/* <Form className="my-3">
                 <Form.Group
                   as={Row}
                   className="mb-3"
@@ -231,13 +234,47 @@ const ThreeScene = () => {
                     </Button>
                   </Col>
                 </Form.Group>
-              </Form>
+              </Form> */}
+
+                <div className="uk-card-body">
+                <Form.Control
+                  type="number"
+                  placeholder="Enter Amount"
+                  onChange={(e) => setCurrentDonation(Number(e.target.value))}
+                />
+                <button onClick={(e) => handleDonation(currentDonation)} className="uk-button uk-button-danger ">
+                  {" "}
+                  Donate{" "}
+                </button>
+                <button  onClick={handleAttachCard} className="uk-button uk-button-secondary">
+                  {" "}
+                  Attach Card{" "}
+                </button>
+              </div>
+
+               
             </Col>
 
 
           </Col>
           <Col lg={3}>
+
+
             <div className='uk-grid uk-child-width-1-4 items-grid uk-grid-collapse' uk-grid="">
+              {items.map((item, index) => (
+                <div key={index} onClick={() => handleItemSelect(item)}
+                
+                >
+                   
+                    <Image src={`/assets/images/${item.name}.png`} height={5} width={5} className='imageDiv' alt={item.name} />
+                    <p className='pricetag'>{item.name} - ${item.price}</p>
+                  
+                </div>
+              ))}
+            </div>
+
+
+            {/* <div className='uk-grid uk-child-width-1-4 items-grid uk-grid-collapse' uk-grid="">
               {items.map((item, index) => (
                 <div key={index} onClick={() => handleItemSelect(item)}
                 
@@ -248,10 +285,11 @@ const ThreeScene = () => {
                   </Row>
                 </div>
               ))}
-            </div>
-            <div className='pt-4'>
-              <p className='totalprice'>Total Price: ${totalPrice}</p>
-              
+            </div> */}
+
+            <div className='pt-4 items-donate-box '>
+            <p className='totalprice'>Total Price: ${totalPrice}</p>
+
               <Button
                 variant="outline-secondary"
                 className="attach-card"
@@ -260,14 +298,14 @@ const ThreeScene = () => {
                 Donate
               </Button>
             </div>
+
           </Col>
 
         </Row>
-
       </Container>
 
 
-      <section className="donate-sec">
+      {/* <section className="donate-sec">
         <div className="gradient">
           <div className="uk-container  uk-padding ">
             <div className="content ">
@@ -296,7 +334,7 @@ const ThreeScene = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="register-sec uk-container">
         <div className="uk-grid " uk-grid="" style={{ marginBottom: "20px" }}>
@@ -306,12 +344,13 @@ const ThreeScene = () => {
           ></div>
 
           <div
-            className="uk-width-1-2@m uk-width-1-1@s"
+            className=" uk-flex uk-flex-middle uk-width-1-2@m uk-width-1-1@s"
             style={{ height: "500px" }}
           >
             <div className="register-title uk-padding ">
               <h1 className="header-card2">TAKE THE CHALLENGE</h1>
               <h2> How many lives you can impact? </h2>
+             
               <Button
                 variant="primary"
                 className="uk-button uk-button-secondary"
