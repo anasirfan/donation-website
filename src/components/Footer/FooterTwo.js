@@ -13,6 +13,7 @@ const FooterTwo = ({ footerBgClass }) => {
             {/* logo */}
             <div className="logo ">
               <img
+                style={{width : 'auto' , margin : '10px' }}
                 src={
                   process.env.PUBLIC_URL + footerBgClass ===
                     "bg-color--blue-two"
@@ -30,7 +31,7 @@ const FooterTwo = ({ footerBgClass }) => {
 
 
           <Row className="footer-single-widget ">
-            <h5 className="footer-single-widget__title">FOLLOW US ON</h5>
+            <h5 style={{marginBottom:'15px'}} className="footer-single-widget__title">FOLLOW US ON</h5>
             <nav className="footer-single-widget__nav footer-single-widget__nav--social">
               <ul className="footer-ul">
                 <li className="footer-li">

@@ -344,12 +344,13 @@ const ThreeScene = () => {
           ></div>
 
           <div
-            className="uk-width-1-2@m uk-width-1-1@s"
+            className=" uk-flex uk-flex-middle uk-width-1-2@m uk-width-1-1@s"
             style={{ height: "500px" }}
           >
             <div className="register-title uk-padding ">
               <h1 className="header-card2">TAKE THE CHALLENGE</h1>
               <h2> How many lives you can impact? </h2>
+             
               <Button
                 variant="primary"
                 className="uk-button uk-button-secondary"
