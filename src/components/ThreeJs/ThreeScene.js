@@ -21,8 +21,8 @@ const FadeTransitionImage = ({ texturePaths, frameIndex }) => {
   }, [texture, invalidate]);
 
   return (
-    <mesh scale={[1, 1, 1]}>
-      <planeGeometry args={[8, 8]} />
+    <mesh scale={[2, 2, 2]}>
+      <planeGeometry args={[5, 5]} />
       <meshBasicMaterial map={texture} transparent />
     </mesh>
   );
@@ -32,11 +32,13 @@ const ThreeScene = () => {
   const [donationAmount, setDonationAmount] = useState(0);
   const [currentDonation, setCurrentDonation] = useState(0);
   const boyTexturePaths = [
-    '/textures/boy-sitting.jpg',
-    '/textures/boy_halfway_up_1.jpg',
-    '/textures/boy_halfway_up_2.jpg',
-    '/textures/boy_halfway_up_3.jpg',
-    '/textures/boy-standing.jpg',
+    '/textures/pic1.png',
+    '/textures/pic2.png',
+    '/textures/pic3.png',
+    '/textures/pic4.png',
+    '/textures/pic5.png',
+    '/textures/pic6.png',
+    '/textures/pic7.png'
   ];
  
   
