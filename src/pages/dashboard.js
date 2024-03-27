@@ -160,7 +160,7 @@ const Dashboard = () => {
         <Col xs={12} md={6} lg={10} className="background-image">
           <Col>
             <div
-              className="uk-flex uk-flex-center uk-flex-middle "
+              className="uk-flex uk-flex-middle uk-flex-around "
               style={{ height: "100vh"}}
             >
               <div className='boyimg ' >
