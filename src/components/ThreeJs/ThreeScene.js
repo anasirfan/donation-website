@@ -38,16 +38,8 @@ const ThreeScene = () => {
     '/textures/boy_halfway_up_3.jpg',
     '/textures/boy-standing.jpg',
   ];
-  const dripTexturePaths = [
-    '/textures/drip_cropped_0_0.png',
-    '/textures/drip_cropped_0_1.png',
-    '/textures/drip_cropped_0_2.png',
-    '/textures/drip_cropped_1_0.png',
-    '/textures/drip_cropped_1_1.png',
-    '/textures/drip_cropped_1_2.png',
-  ];
-  const dripFrames = dripTexturePaths.length - 1;
-  const [dripFrameIndex, setDripFrameIndex] = useState(0);
+ 
+  
   const [boyFrameIndex, setBoyFrameIndex] = useState(0);
   const [registerModal, setRegisterModal] = useState(false)
   const [loginModal, setLoginModal] = useState(false)
@@ -83,7 +75,7 @@ const ThreeScene = () => {
 
     // Add more items with their respective prices
   ];
-
+  
   const [selectedItems, setSelectedItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -99,16 +91,13 @@ const ThreeScene = () => {
     // Logic to attach a card
   };
 
-  // Update the frame index for the drip based on donation amount
-  useEffect(() => {
-    const newDripFrameIndex = Math.floor((donationAmount / 100) * dripFrames);
-    setDripFrameIndex(newDripFrameIndex);
-  }, [donationAmount, dripFrames]);
+
 
   // Update the frame index for the boy after reaching $100
   useEffect(() => {
     let interval;
     if (donationAmount >= 100 && boyFrameIndex < boyTexturePaths.length - 1) {
+
       interval = setInterval(() => {
         setBoyFrameIndex((prevIndex) => {
           const nextIndex = prevIndex + 1;
@@ -135,6 +124,8 @@ const ThreeScene = () => {
   return (
     <>
       <Container fluid className="background-image ">
+        <p className='pt-4 font-bold'>Total Donation : <span>${donationAmount}</span> </p>  
+        <p className='font-bold'>No. of Lives Saved : 3</p>  
         <Row className=" justify-content-center align-items-center">
           <Col xs={4} md={4} lg={1} className="challenge-div">
             {/* Card for the challenge */}
