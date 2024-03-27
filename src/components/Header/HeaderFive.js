@@ -112,7 +112,7 @@ const HeaderFive = ({ aboutOverlay }) => {
 
               {/* icons */}
               <div className="header-content__icons space-pl--15">
-                <ul className="d-none d-lg-block">
+                <ul className="d-none d-lg-block" style={{marginBottom:'0px'}} >
                   <li>
                     <Anchor path="/other/login-register">
                         <IoMdPerson />

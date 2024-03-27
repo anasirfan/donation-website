@@ -126,18 +126,18 @@ const Dashboard = () => {
     <Container fluid>
       {/* Main Content */}
       <Row>
-        <Col xs={12} md={3} lg={3} className=" p-3 vh-100" style={{ backgroundColor: '#38040e' }} >
-          <ListGroup className="vh-100">
+        <Col xs={12} md ={2} lg = {2} className=" dashboard p-3 vh-100"  >
+          <ListGroup className=" sidebar vh-100">
             <ListGroup.Item>
               <h4 className=''>Name:<span>John Doe</span> </h4>
 
             </ListGroup.Item>
             <ListGroup.Item>
-              <h4 className=''>Rank:<span>Gold Member</span> </h4>
+              <h4 className=''>Rank:<span>Gold </span> </h4>
 
             </ListGroup.Item>
             <ListGroup.Item>
-              <h4 className=''>no. of lifes saved:<span>42</span> </h4>
+              <h4 className=''> Lifes saved:<span>42</span> </h4>
             </ListGroup.Item>
             <ListGroup.Item>
               <Button variant="" className="w-100 mb-2" style={{ background: '#640d14' }}>
@@ -157,7 +157,7 @@ const Dashboard = () => {
           </ListGroup>
         </Col>
 
-        <Col xs={12} md={6} lg={9} className="background-image">
+        <Col xs={12} md={6} lg={10} className="background-image">
           <Col>
             <div
               className="uk-flex uk-flex-center uk-flex-middle "
@@ -178,18 +178,25 @@ const Dashboard = () => {
               </div>
 
               <div className='donate-items '>
+
+
+
               <div className='uk-grid uk-child-width-1-4 items-grid uk-grid-collapse' uk-grid="">
               {items.map((item, index) => (
                 <div key={index} onClick={() => handleItemSelect(item)}
                 
                 >
-                   <Row>
+                   
                     <Image src={`/assets/images/${item.name}.png`} height={5} width={5} className='imageDiv' alt={item.name} />
                     <p className='pricetag'>{item.name} - ${item.price}</p>
-                  </Row>
+                  
                 </div>
               ))}
             </div>
+
+
+
+
             <div className='pt-4'>
               <p className='totalprice'>Total Price: ${totalPrice}</p>
               

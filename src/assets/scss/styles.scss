@@ -69,6 +69,15 @@
     width: 200px;
 }
 
+.gradient-div{
+    background: rgb(255,228,240);
+background: radial-gradient(circle, rgba(255,228,240,0) 0%, rgba(0,0,0,0.7707457983193278) 88%);
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+}
+
 .heading-card {
     font-size: 11px;
     font-style: italic;
@@ -105,13 +114,13 @@
 }
 
 .attach-card {
-    margin-left: 50px;
+    // margin-left: 50px;   
     color: white;
-    background: #3c3636;
+    background: #d34141;
 }
 .totalprice {
     
-    margin-left: 50px;
+    // margin-left: 50px;
     color: white;
 }
 
@@ -122,7 +131,7 @@
 }
 
 .background-image {
-    background-image: url('/assets/images/background.jpg');
+    background-image: radial-gradient(circle, rgba(255,228,240,0) 0%, rgba(0,0,0,0.7707457983193278) 88%),  url('/assets/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -259,12 +268,27 @@ color: white;
 .items-grid div {
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(0, 0, 0); 
-    height: 50px; 
+    border: 1px solid rgb(109 106 106); 
+    height: 80px; 
     // background-color: darkgrey;
 }
+.items-grid div p {
+    margin: 10px 0px 5px 0px !important
+}
+.items-donate-box{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.dashboard{
+    background: rgb(115,26,29);
+background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, rgba(97,12,12,1) 100%);
+}
+
 
 .main-footer .logo {
     margin-bottom: 5px;
@@ -273,8 +297,8 @@ color: white;
 
 
 .donate-items{
-    width: 20%;
-    margin-left: 10%;
+    width: 30%;
+    margin-left: 5%;
 }
 .boyimg{
     height: 60%;
@@ -284,6 +308,7 @@ color: white;
 
 .list-group .list-group-item{
     margin-top: 20px;
+    border-radius: 4px;
 
 }
 .list-group h4{
@@ -304,22 +329,11 @@ color: white;
 
 .list-group-item button{
     color: white;
-}
-
-
-
-@media screen and (max-width:768px) {
-    .boyimg{
-        width: 50%;
-    }
-    .donate-items {
-        width: 50%;
-        margin-left: 8%;
-    }
+    margin-top: 10px;
 }
 
 .pricetag{
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .grid-div{
@@ -332,4 +346,14 @@ color: white;
 .imageDiv {
     height: 35px;
     width: 40px;
+}
+
+@media screen and (max-width:768px) {
+    .boyimg{
+        width: 50%;
+    }
+    .donate-items {
+        width: 50%;
+        margin-left: 8%;
+    }
 }
