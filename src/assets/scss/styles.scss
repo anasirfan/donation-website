@@ -303,6 +303,7 @@ background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, 
 .boyimg{
     height: 60%;
     width: fit-content;
+    margin-left: auto;
 
 }
 
@@ -312,7 +313,7 @@ background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, 
 
 }
 .list-group h4{
-    margin-top: 20px;
+    margin: 10px 0px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
 }
