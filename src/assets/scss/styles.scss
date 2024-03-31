@@ -358,3 +358,13 @@ background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, 
         margin-left: 8%;
     }
 }
+
+.navbar {
+    background-color: #f8f9fa; /* Light background color */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}

@@ -1,7 +1,7 @@
 import { NavBar, Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect, Fragment } from "react";
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/NavBar';
+// import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Anchor from "../anchor";
 import MobileMenu from "./elements/MobileMenu";
@@ -14,7 +14,7 @@ function MMnavigate() {
   );
   return (
     <>
-    <Navbar bg="light" fixed="bottom" expand="lg">
+    <nav class="navbar">
     <Container fluid className="justify-content-center ">
       <Row>
         <Col className="px-4 mx-1">
@@ -34,7 +34,7 @@ function MMnavigate() {
         </Col>
       </Row>
     </Container>
-  </Navbar>
+  </nav>
   
   </>
 
