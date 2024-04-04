@@ -21,8 +21,8 @@ const FadeTransitionImage = ({ texturePaths, frameIndex }) => {
   }, [texture, invalidate]);
 
   return (
-    <mesh scale={[1, 1, 1]}>
-      <planeGeometry args={[8, 8]} />
+    <mesh scale={[2, 2, 2]}>
+      <planeGeometry args={[5, 5]} />
       <meshBasicMaterial map={texture} transparent />
     </mesh>
   );
@@ -32,22 +32,16 @@ const ThreeScene = () => {
   const [donationAmount, setDonationAmount] = useState(0);
   const [currentDonation, setCurrentDonation] = useState(0);
   const boyTexturePaths = [
-    '/textures/boy-sitting.jpg',
-    '/textures/boy_halfway_up_1.jpg',
-    '/textures/boy_halfway_up_2.jpg',
-    '/textures/boy_halfway_up_3.jpg',
-    '/textures/boy-standing.jpg',
+    '/textures/pic1.png',
+    '/textures/pic2.png',
+    '/textures/pic3.png',
+    '/textures/pic4.png',
+    '/textures/pic5.png',
+    '/textures/pic6.png',
+    '/textures/pic7.png'
   ];
-  const dripTexturePaths = [
-    '/textures/drip_cropped_0_0.png',
-    '/textures/drip_cropped_0_1.png',
-    '/textures/drip_cropped_0_2.png',
-    '/textures/drip_cropped_1_0.png',
-    '/textures/drip_cropped_1_1.png',
-    '/textures/drip_cropped_1_2.png',
-  ];
-  const dripFrames = dripTexturePaths.length - 1;
-  const [dripFrameIndex, setDripFrameIndex] = useState(0);
+ 
+  
   const [boyFrameIndex, setBoyFrameIndex] = useState(0);
   const [registerModal, setRegisterModal] = useState(false)
   const [loginModal, setLoginModal] = useState(false)
@@ -83,7 +77,7 @@ const ThreeScene = () => {
 
     // Add more items with their respective prices
   ];
-
+  
   const [selectedItems, setSelectedItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -99,16 +93,13 @@ const ThreeScene = () => {
     // Logic to attach a card
   };
 
-  // Update the frame index for the drip based on donation amount
-  useEffect(() => {
-    const newDripFrameIndex = Math.floor((donationAmount / 100) * dripFrames);
-    setDripFrameIndex(newDripFrameIndex);
-  }, [donationAmount, dripFrames]);
+
 
   // Update the frame index for the boy after reaching $100
   useEffect(() => {
     let interval;
     if (donationAmount >= 100 && boyFrameIndex < boyTexturePaths.length - 1) {
+
       interval = setInterval(() => {
         setBoyFrameIndex((prevIndex) => {
           const nextIndex = prevIndex + 1;
