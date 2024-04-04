@@ -262,7 +262,7 @@
 
           position: relative;
 
-          color: white;
+          color: #2f2e2a;
 
           &:after {
             position: absolute;
@@ -437,8 +437,10 @@
 }
 
 .bg-clr {
-  background: rgb(115,26,29);
-  background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, rgba(97,12,12,1) 100%);
+  // background: rgb(115,26,29);
+  // background: linear-gradient(90deg, rgba(115,26,29,1) 0%, rgba(171,24,29,1) 50%, rgba(97,12,12,1) 100%);
+  background: #ffd801;
+  background: linear-gradient(90deg, #d0b414 0%, #ffe44d 50%, #ceb213 100%);
 }
 
 .main-footer { 

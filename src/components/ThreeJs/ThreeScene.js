@@ -149,6 +149,21 @@ const ThreeScene = () => {
                 </Button>
               </Card.Body>
             </Card>
+            <div className="">
+                <Form.Control
+                  type="number"
+                  placeholder="Enter Amount"
+                  onChange={(e) => setCurrentDonation(Number(e.target.value))}
+                />
+                <button onClick={(e) => handleDonation(currentDonation)} className="uk-button uk-button-danger ">
+                  {" "}
+                  Donate{" "}
+                </button>
+                {/* <button  onClick={handleAttachCard} className="uk-button uk-button-secondary">
+                  {" "}
+                  Attach Card{" "}
+                </button> */}
+              </div>
 
 
           </Col>
@@ -227,7 +242,7 @@ const ThreeScene = () => {
                 </Form.Group>
               </Form> */}
 
-                <div className="uk-card-body">
+                {/* <div className="uk-card-body">
                 <Form.Control
                   type="number"
                   placeholder="Enter Amount"
@@ -241,7 +256,7 @@ const ThreeScene = () => {
                   {" "}
                   Attach Card{" "}
                 </button>
-              </div>
+              </div> */}
 
                
             </Col>
@@ -250,7 +265,7 @@ const ThreeScene = () => {
           </Col>
           <Col lg={3}>
 
-
+            <button className='uk-button uk-button-secondary' > Open Wardrobe </button>
             <div className='uk-grid uk-child-width-1-4 items-grid uk-grid-collapse' uk-grid="">
               {items.map((item, index) => (
                 <div key={index} onClick={() => handleItemSelect(item)}

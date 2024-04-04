@@ -16,6 +16,8 @@ import Navigation from "./elements/Navigation";
 import AboutOverlay from "./elements/AboutOverlay";
 import MobileMenu from "./elements/MobileMenu";
 import Anchor from "../anchor";
+import SignupModal from '../Header/elements/SignupModal';
+import LoginModal from '../Header/elements/LoginModal';
 
 const HeaderFive = ({ aboutOverlay }) => {
   const [scroll, setScroll] = useState(0);
@@ -42,6 +44,23 @@ const HeaderFive = ({ aboutOverlay }) => {
   const handleScroll = () => {
     setScroll(window.scrollY);
   };
+
+  const [registerModal, setRegisterModal] = useState(false)
+  const [loginModal, setLoginModal] = useState(false)
+
+  const handleRegister = () => {
+    setRegisterModal(true)
+    setLoginModal(false)
+
+  };
+
+  const handleLogin = () => {
+    setLoginModal(true)
+    setRegisterModal(false)
+
+  };  
+
+
 
   return (
     <Fragment>
@@ -93,6 +112,20 @@ const HeaderFive = ({ aboutOverlay }) => {
             </div>
           </Container>
         </div> */}
+        {registerModal && (
+            <SignupModal
+              show={registerModal}
+              onHide={() => setRegisterModal(false)}
+              createLogin={ () => handleLogin() }
+            />
+          )}
+          {loginModal && (
+            <LoginModal
+              show={loginModal}
+              onHide={() => setLoginModal(false)}
+              createAccount={ () => handleRegister() }
+            />
+          )}
         <div className="header-bottom-area">
           <Container className="wide">
             <div className="header-content d-flex align-items-center justify-content-between position-relative space-py-mobile-only--30">
@@ -112,7 +145,10 @@ const HeaderFive = ({ aboutOverlay }) => {
 
               {/* icons */}
               <div className="header-content__icons space-pl--15">
-                <ul className="d-none d-lg-block" style={{marginBottom:'0px'}} >
+
+                <button onClick={handleRegister} className="uk-button uk-button-danger"> Take a challenge </button>
+
+                {/* <ul className="d-none d-lg-block" style={{marginBottom:'0px'}} >
                   <li>
                     <Anchor path="/other/login-register">
                         <IoMdPerson />
@@ -125,8 +161,12 @@ const HeaderFive = ({ aboutOverlay }) => {
                       <IoIosMenu />
                     </button>
                   </li>
-                </ul>
+                </ul> */}
               </div>
+              
+
+
+
             </div>
           </Container>
         </div>
