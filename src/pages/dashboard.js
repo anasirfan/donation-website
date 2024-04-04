@@ -139,21 +139,21 @@ const Dashboard = () => {
             <ListGroup.Item>
               <h4 className=''> Lifes saved:<span>42</span> </h4>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <Button variant="" className="w-100 mb-2" style={{ background: '#640d14' }}>
+          
+              <Button variant="" className="w-100 mt-4 mb-2" style={{ background: '#a5cd37' }}>
                 Invite
               </Button>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Button variant="" className="w-100 mb-2" style={{ background: '#800e13' }} >
+            
+            
+              <Button variant="" className="w-100 mt-4 mb-2" style={{ background: '#a5cd37' }} >
                 Share Progress
               </Button>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Button variant="" className="w-100" style={{ background: '#ad2831' }} >
+            
+            
+              <Button variant="" className="w-100 mt-4 "  style={{ background: '#a5cd37' }} >
                 Card Details
               </Button>
-            </ListGroup.Item>
+            
           </ListGroup>
         </Col>
 
