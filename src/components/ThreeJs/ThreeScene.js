@@ -246,10 +246,10 @@ const ThreeScene = () => {
                   {" "}
                   Donate{" "}
                 </button>
-                <button  onClick={handleAttachCard} className="uk-button uk-button-secondary">
+                {/* <button  onClick={handleAttachCard} className="uk-button uk-button-secondary">
                   {" "}
                   Attach Card{" "}
-                </button>
+                </button> */}
               </div>
 
                
